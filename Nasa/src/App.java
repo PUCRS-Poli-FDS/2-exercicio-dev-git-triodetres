@@ -15,7 +15,7 @@ public class App {
 		
 		rover2.moveRover("MMRMMRMRRM");
 		
-		System.out.println(rover.toString());
-		System.out.println(rover2.toString());
+		System.out.println(rover.posicaoRover());
+		System.out.println(rover2.posicaoRover());
 	}
 }

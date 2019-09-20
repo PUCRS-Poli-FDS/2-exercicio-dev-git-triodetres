@@ -10,19 +10,19 @@ public class MarsRover {
 		this.virado = 'n';
 	}
 
-	public void setPosicao(final int x, final int y, final char z) {
+	public void setPosicao(int x, int y, char z) {
 		this.posX = x;
 		this.posY = y;
 		this.virado = z;
 	}
 
-	public void moveRover(final String x) {
+	public void moveRover(String x) {
 		for (int i = 0; i < x.length(); ++i) {
 			this.moveRover(Character.toLowerCase(x.charAt(i)));// desmembrando a string para gerar um char e colocando em caixa baixa
 		}
 	}
 
-	public void moveRover(final char x) {
+	public void moveRover(char x) {
 		
 		if(x == 'l')
 		{
@@ -52,7 +52,7 @@ public class MarsRover {
 		{
 			if(posY == 0 )
 			{
-				throw new IllegalArgumentException("Limite do terreno alcançado");
+				throw new IllegalArgumentException("Limite do terreno alcanÃ§ado");
 			}
 			else
 			{
@@ -63,7 +63,7 @@ public class MarsRover {
 		{
 			if(posX == 0 )
 			{
-				throw new IllegalArgumentException("Limite do terreno alcançado");
+				throw new IllegalArgumentException("Limite do terreno alcanÃ§ado");
 			}
 			else
 			{
@@ -72,51 +72,8 @@ public class MarsRover {
 		}
 	}
 	
-	public void viraRoverL()
-	{
-		switch(virado)
-		{
-		case 'n':
-			virado = 'w';
-			break;
-		case 'w':
-			virado = 's';
-			break;
-		case 's':
-			virado = 'e';
-			break;
-		case 'e':
-			virado = 'n';
-			break;
-		default:
-			throw new IllegalArgumentException("Comando inválido");
-		}
-	}
-	
-	public void viraRoverR()
-	{
-		switch(virado)
-		{
-		case 'n':
-			virado = 'e';
-			break;
-		case 'e':
-			virado = 's';
-			break;
-		case 's':
-			virado = 'w';
-			break;
-		case 'w':
-			virado = 'n';
-			break;
-		default:
-			throw new IllegalArgumentException("Comando inválido");
-		}
-	}
-	
-	@Override
-	public String toString() {
-		final String aux = "X: " + this.posX + " Y: " + this.posY + " Virado para o " + this.virado;
+	public String posicaoRover() {
+		final String aux = this.posX + " " + this.posY + " " + this.virado;
 		return aux;
 	}
 }
