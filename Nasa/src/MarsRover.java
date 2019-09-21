@@ -52,7 +52,7 @@ public class MarsRover {
 		{
 			if(posY == 0 )
 			{
-				throw new IllegalArgumentException("Limite do terreno alcançado");
+				throw new IllegalArgumentException("Limite do terreno alcanÃ§ado");
 			}
 			else
 			{
@@ -63,7 +63,7 @@ public class MarsRover {
 		{
 			if(posX == 0 )
 			{
-				throw new IllegalArgumentException("Limite do terreno alcançado");
+				throw new IllegalArgumentException("Limite do terreno alcanÃ§ado");
 			}
 			else
 			{
@@ -114,4 +114,4 @@ public class MarsRover {
 		final String aux = this.posX + " " + this.posY + " " + this.virado;
 		return aux;
 	}
-}
+ }
