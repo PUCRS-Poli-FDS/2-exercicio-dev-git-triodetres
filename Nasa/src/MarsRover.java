@@ -52,7 +52,7 @@ public class MarsRover {
 		{
 			if(posY == 0 )
 			{
-				throw new IllegalArgumentException("Limite do terreno alcanÃ§ado");
+				throw new IllegalArgumentException("Limite do terreno alcançado");
 			}
 			else
 			{
@@ -63,12 +63,50 @@ public class MarsRover {
 		{
 			if(posX == 0 )
 			{
-				throw new IllegalArgumentException("Limite do terreno alcanÃ§ado");
+				throw new IllegalArgumentException("Limite do terreno alcançado");
 			}
 			else
 			{
 				posX --;
 			}
+		}
+	}
+	
+	public void viraRoverL()
+	{
+		switch(virado)
+		{
+		case 'n':
+			virado = 'w';
+			break;
+		case 'w':
+			virado = 's';
+			break;
+		case 's':
+			virado = 'e';
+			break;
+		default:
+			virado = 'n';
+			break;
+		}
+	}
+	
+	public void viraRoverR()
+	{
+		switch(virado)
+		{
+		case 'n':
+			virado = 'e';
+			break;
+		case 'e':
+			virado = 's';
+			break;
+		case 's':
+			virado = 'w';
+			break;
+		default:
+			virado = 'n';
+			break;
 		}
 	}
 	
